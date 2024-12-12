@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Anaveo-Build
-        path: Anaveo/bin/Release
+        path: bin/Release
