@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Anaveo.CustomComponent;
 
 namespace Anaveo
 {
@@ -31,47 +32,15 @@ namespace Anaveo
             string username = Username.Text;
             string password = Password.Password;
 
-            // Create a custom Window for the message box
-            Window messageBox = new Window
-            {
-                Title = "Alert",
-                SizeToContent = SizeToContent.WidthAndHeight,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                Owner = this,
-                ResizeMode = ResizeMode.NoResize // Disable resizing
-            };
-
-            // Create a StackPanel for layout
-            StackPanel stackPanel = new StackPanel
-            {
-                Orientation = Orientation.Vertical,
-                Margin = new Thickness(20)
-            };
-
-            // Add a TextBlock for the message
-            TextBlock messageText = new TextBlock
-            {
-                Text = "Button clicked!",
-                TextAlignment = TextAlignment.Center,
-                Margin = new Thickness(0, 0, 0, 20)
-            };
-            stackPanel.Children.Add(messageText);
-
-            // Add a Button to close the message box
-            Button closeButton = new Button
-            {
-                Content = "Close",
-                Width = 80,
-                HorizontalAlignment = HorizontalAlignment.Center
-            };
-            closeButton.Click += (s, args) => messageBox.Close();
-            stackPanel.Children.Add(closeButton);
-
-            // Set the content of the custom window
-            messageBox.Content = stackPanel;
-
-            // Show the custom MessageBox
-            messageBox.ShowDialog();
+            CustomMessageBox.Show(
+                this,
+                "Alert",
+                $"Username: {username}, Password: {password}", 
+                () => {
+                    Console.WriteLine("Button closed!");
+                }
+            );  
         }
     }
 }
+

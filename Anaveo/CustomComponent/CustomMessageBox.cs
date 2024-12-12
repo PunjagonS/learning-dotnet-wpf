@@ -2,18 +2,18 @@
 using System.Windows;
 using System;
 
-namespace Anaveo
+namespace Anaveo.CustomComponent
 {
     public class CustomMessageBox
     {
-        public static void Show(string title, string message, Window owner, Action onButtonClick = null)
+        public static void Show(Window owner, string title, string message, Action onButtonClick = null)
         {
             Window messageBox = new Window
             {
+                Owner = owner,
                 Title = title,
                 SizeToContent = SizeToContent.WidthAndHeight,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                Owner = owner,
                 ResizeMode = ResizeMode.NoResize
             };
 
