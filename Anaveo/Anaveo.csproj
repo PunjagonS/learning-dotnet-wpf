@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{892C3E85-2929-4AE9-AE2B-E1E2E50CE267}</ProjectGuid>
+    <ProjectGuid>{197077CE-AD69-4B09-BDDA-A591F61A3B61}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Anaveo</RootNamespace>
     <AssemblyName>Anaveo</AssemblyName>
