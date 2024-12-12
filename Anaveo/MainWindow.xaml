@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:Anaveo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
         
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Username" VerticalAlignment="Center" />
+            <TextBox x:Name="Username" Margin="10,0,0,0" Width="200" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Password" VerticalAlignment="Center" />
+            <PasswordBox x:Name="Password" Margin="10,0,0,0" Width="200" />
+        </StackPanel>
+        <Button Content="Login" Click="Button_Click" HorizontalAlignment="Center" Margin="10" />
+    </StackPanel>
 </Window>
