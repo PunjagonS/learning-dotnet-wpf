@@ -21,7 +21,7 @@ jobs:
 
     # 3. Restore NuGet packages
     - name: Restore NuGet packages
-      run: nuget restore Anaveo.sln
+      run: nuget restore Anaveo/Anaveo.sln
 
     # 4. Build the WPF project in Release mode
     - name: Build Anaveo WPF project
