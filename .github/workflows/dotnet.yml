@@ -1,0 +1,35 @@
+name: Build and Store Artifacts for Anaveo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    # 1. Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Setup MSBuild for .NET Framework
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    # 3. Restore NuGet packages
+    - name: Restore NuGet packages
+      run: nuget restore Anaveo.sln
+
+    # 4. Build the WPF project in Release mode
+    - name: Build Anaveo WPF project
+      run: msbuild Anaveo.sln /p:Configuration=Release
+
+    # 5. Upload build output as artifact
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Anaveo-Build
+        path: Anaveo/bin/Release
