@@ -25,7 +25,7 @@ jobs:
 
     # 4. Build the WPF project in Release mode
     - name: Build Anaveo WPF project
-      run: msbuild Anaveo.sln /p:Configuration=Release
+      run: msbuild Anaveo/Anaveo.sln /p:Configuration=Release
 
     # 5. Upload build output as artifact
     - name: Upload Build Artifacts
