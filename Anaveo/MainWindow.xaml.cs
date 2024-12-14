@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Anaveo.CustomComponent;
+using Anaveo.CustomComponents;
+using Anaveo.CustomComponents.Services;
 
 namespace Anaveo
 {
@@ -32,14 +33,14 @@ namespace Anaveo
             string username = Username.Text;
             string password = Password.Password;
 
-            CustomMessageBox.Show(
+            CustomMessageBoxService.Show(
                 this,
                 "Alert",
-                $"Username: {username}, Password: {password}", 
+                $"Username: {username}, Password: {password}",
                 () => {
                     Console.WriteLine("Button closed!");
                 }
-            );  
+            );
         }
     }
 }

@@ -56,7 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CustomComponents\CustomMessageBox.xaml">
+    <Page Include="CustomComponents\Views\CustomMessageBoxView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -68,9 +68,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CustomComponents\CustomMessageBox.xaml.cs">
-      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    <Compile Include="CustomComponents\Services\CustomMessageBoxService.cs" />
+    <Compile Include="CustomComponents\Views\CustomMessageBoxView.xaml.cs">
+      <DependentUpon>CustomMessageBoxView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomComponents\ViewModels\CustomMessageBoxViewModel.cs" />
+    <Compile Include="CustomComponents\Commands\RelayCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
