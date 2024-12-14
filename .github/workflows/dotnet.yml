@@ -29,7 +29,7 @@ jobs:
 
     # 5. Upload build output as artifact
     - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: Anaveo-Build
         path: Anaveo/bin/Release
