@@ -1,21 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Anaveo.Common.CustomComponents.MessageAlertBox;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Anaveo.CustomComponents;
-using Anaveo.CustomComponents.Services;
 
-namespace Anaveo
+namespace Anaveo.UI.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -33,7 +20,7 @@ namespace Anaveo
             string username = Username.Text;
             string password = Password.Password;
 
-            CustomMessageBoxService.Show(
+            MessageAlertBoxService.Show(
                 this,
                 "Alert",
                 $"Username: {username}, Password: {password}",

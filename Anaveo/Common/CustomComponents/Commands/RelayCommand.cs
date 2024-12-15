@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Anaveo.CustomComponents.Commands
+namespace Anaveo.Common.CustomComponents.Commands
 {
     public class RelayCommand : ICommand
     {

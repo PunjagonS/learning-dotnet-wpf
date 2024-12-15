@@ -56,11 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CustomComponents\Views\CustomMessageBoxView.xaml">
+    <Page Include="Common\CustomComponents\MessageAlertBox\MessageAlertBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="UI\Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -68,13 +68,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CustomComponents\Services\CustomMessageBoxService.cs" />
-    <Compile Include="CustomComponents\Views\CustomMessageBoxView.xaml.cs">
-      <DependentUpon>CustomMessageBoxView.xaml</DependentUpon>
+    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBoxService.cs" />
+    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBox.xaml.cs">
+      <DependentUpon>MessageAlertBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomComponents\ViewModels\CustomMessageBoxViewModel.cs" />
-    <Compile Include="CustomComponents\Commands\RelayCommand.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBoxViewModel.cs" />
+    <Compile Include="Common\CustomComponents\Commands\RelayCommand.cs" />
+    <Compile Include="UI\Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -105,5 +105,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
