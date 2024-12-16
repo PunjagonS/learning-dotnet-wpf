@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace Anaveo.Common.CustomComponents.MessageAlertBox
+namespace Anaveo.Common.CustomComponents.MessageAlert
 {
-    public class MessageAlertBoxViewModel : INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
 
         #region Properties
@@ -28,7 +28,7 @@ namespace Anaveo.Common.CustomComponents.MessageAlertBox
         public ICommand CloseCommand { get; }
         private readonly Action _onButtonClick;
         public event Action OnRequestClose;
-        public MessageAlertBoxViewModel(Action onButtonClick = null)
+        public ViewModel(Action onButtonClick = null)
         {
             _onButtonClick = onButtonClick;
 

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Windows;
 
-namespace Anaveo.Common.CustomComponents.MessageAlertBox
+namespace Anaveo.Common.CustomComponents.MessageAlert
 {
-    public partial class MessageAlertBox : Window
+    public partial class MessageWindow : Window
     {
-        public MessageAlertBox()
+        public MessageWindow()
         {
             InitializeComponent();
         }
 
-        public MessageAlertBox(MessageAlertBoxViewModel vm) : this()
+        public MessageWindow(ViewModel vm) : this()
         {
             DataContext = vm;
             vm.OnRequestClose += () =>

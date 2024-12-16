@@ -56,28 +56,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Common\CustomComponents\MessageAlertBox\MessageAlertBox.xaml">
+    <Compile Include="UI\Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Common\CustomComponents\MessageAlert\MessageWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UI\Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBoxService.cs" />
-    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBox.xaml.cs">
-      <DependentUpon>MessageAlertBox.xaml</DependentUpon>
+    <Compile Include="Common\CustomComponents\MessageAlert\Service.cs" />
+    <Compile Include="Common\CustomComponents\MessageAlert\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\CustomComponents\MessageAlertBox\MessageAlertBoxViewModel.cs" />
+    <Compile Include="Common\CustomComponents\MessageAlert\ViewModel.cs" />
     <Compile Include="Common\CustomComponents\Commands\RelayCommand.cs" />
-    <Compile Include="UI\Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="UI\Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

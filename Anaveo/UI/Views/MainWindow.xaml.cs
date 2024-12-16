@@ -1,4 +1,4 @@
-﻿using Anaveo.Common.CustomComponents.MessageAlertBox;
+﻿using Anaveo.Common.CustomComponents.MessageAlert;
 using System;
 using System.Windows;
 
@@ -20,11 +20,12 @@ namespace Anaveo.UI.Views
             string username = Username.Text;
             string password = Password.Password;
 
-            MessageAlertBoxService.Show(
+            Service.Show(
                 this,
                 "Alert",
                 $"Username: {username}, Password: {password}",
-                () => {
+                () =>
+                {
                     Console.WriteLine("Button closed!");
                 }
             );
